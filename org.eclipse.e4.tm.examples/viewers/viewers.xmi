@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<viewers:ViewerInputs xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewers="platform:/resource/org.eclipse.e4.tm.examples/viewers/viewers.ecore">
+  <listInputs>
+    <elements label="label 1"/>
+    <elements label="label 2"/>
+    <elements label="label 3"/>
+    <elements label="label 4"/>
+  </listInputs>
+  <tableInputs>
+    <elements name="name1" label="label 1"/>
+    <elements name="name2" label="label 2"/>
+    <elements name="name3" label="label 3"/>
+    <elements name="name4" label="label 4"/>
+  </tableInputs>
+  <treeInputs>
+    <elements label="label 1">
+      <children label="label 1.1"/>
+    </elements>
+    <elements label="label 2">
+      <children label="label 2.1"/>
+      <children label="label 2.2"/>
+      <children label="label 2.3"/>
+      <children label="label 2.4"/>
+    </elements>
+  </treeInputs>
+</viewers:ViewerInputs>

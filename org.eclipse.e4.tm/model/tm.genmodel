@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.e4.tm/src"
+    editDirectory="" editorDirectory="" modelPluginID="org.eclipse.e4.tm" modelName="Tm"
+    editPluginClass="org.eclipse.e4.tm.provider.TmEditPlugin" editorPluginClass="org.eclipse.e4.tm.provider.TmEditorPlugin"
+    testsDirectory="" testSuiteClass="" importerID="org.eclipse.emf.importer.ecore"
+    containmentProxies="true" complianceLevel="5.0" copyrightFields="false" testsPluginID="org.eclipse.e4.tm.edit">
+  <foreignModel>tm.ecore</foreignModel>
+  <genPackages prefix="Tm" basePackage="org.eclipse.e4" disposableProviderFactory="true"
+      ecorePackage="tm.ecore#/">
+    <nestedGenPackages prefix="Widgets" disposableProviderFactory="true" multipleEditorPages="false"
+        childCreationExtenders="true" fileExtensions="tm" ecorePackage="tm.ecore#//widgets">
+      <genDataTypes ecoreDataType="tm.ecore#//widgets/RuntimeEvent"/>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/Control">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference tm.ecore#//widgets/Control/composite"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Control/enabled"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Control/visible"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/Control/layoutData"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Control/toolTip"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/Label" labelFeature="#//tm/util/Labeled/text"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/Text">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Text/editable"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Text/modify"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Text/keyUp"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Text/text"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/List">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/List/items"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/SingleSelectionList"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/ComboBox"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/MultipleSelectionList"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/Browser">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Browser/location"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Browser/url"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Browser/text"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/Button" labelFeature="#//tm/util/Labeled/text">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Button/selectionEvent"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/PushButton" labelFeature="#//tm/util/Labeled/text"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/CheckBox" labelFeature="#//tm/util/Labeled/text">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/CheckBox/selection"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/ToggleButton" labelFeature="#//tm/util/Labeled/text">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/ToggleButton/selection"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/BoundedValueControl">
+        <genTypeParameters ecoreTypeParameter="tm.ecore#//widgets/BoundedValueControl/T"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/BoundedValueControl/minimum"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/BoundedValueControl/maximum"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/BoundedValueControl/valueEvent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/BoundedValueControl/value"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/AbstractComposite">
+        <genTypeParameters ecoreTypeParameter="tm.ecore#//widgets/AbstractComposite/T"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/AbstractComposite/controls"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/AbstractComposite/styles"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/AbstractComposite/layout"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/Composite"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/GroupBox" labelFeature="#//tm/util/Labeled/text"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/TabFolder"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/Tab"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/Shell"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/Separator"/>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/ListViewer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/ListViewer/viewProvider"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/ListViewer/contentProvider"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/SplitPane">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/SplitPane/orientation"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/PasswordField"/>
+      <genClasses ecoreClass="tm.ecore#//widgets/IndexSelection">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/IndexSelection/selectionEvent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/IndexSelection/selectionIndex"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/IndexSelection/selectionIndices"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//widgets/TreeViewer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/TreeViewer/viewProvider"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//widgets/TreeViewer/contentProvider"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Styles" disposableProviderFactory="true" multipleEditorPages="false"
+        generateModelWizard="false" childCreationExtenders="true" ecorePackage="tm.ecore#//styles">
+      <genClasses image="false" ecoreClass="tm.ecore#//styles/StyleItem">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/StyleItem/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/StyleItem/source"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//styles/StyleSelector">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/StyleSelector/property"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/StyleSelector/selector"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//styles/Style">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/Style/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//styles/Style/styleItems"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//styles/Style/styleSelectors"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//styles/Styled">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/Styled/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//styles/Styled/role"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//styles/Styled/style"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//styles/ColorItem"/>
+      <genClasses ecoreClass="tm.ecore#//styles/ImageItem"/>
+      <genClasses image="false" ecoreClass="tm.ecore#//styles/FontItem"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Layouts" disposableProviderFactory="true" multipleEditorPages="false"
+        generateModelWizard="false" ecorePackage="tm.ecore#//layouts">
+      <genClasses ecoreClass="tm.ecore#//layouts/LayoutData"/>
+      <genClasses ecoreClass="tm.ecore#//layouts/Layout">
+        <genTypeParameters ecoreTypeParameter="tm.ecore#//layouts/Layout/T"/>
+        <genOperations ecoreOperation="tm.ecore#//layouts/Layout/createLayoutData"/>
+      </genClasses>
+      <genClasses dynamic="true" ecoreClass="tm.ecore#//layouts/RectangleLayout">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//layouts/RectangleLayout/defaultLayoutData"/>
+      </genClasses>
+      <genClasses dynamic="true" ecoreClass="tm.ecore#//layouts/RectangleLayoutData"/>
+      <genClasses dynamic="true" ecoreClass="tm.ecore#//layouts/Position">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//layouts/Position/x"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//layouts/Position/y"/>
+      </genClasses>
+      <genClasses dynamic="true" ecoreClass="tm.ecore#//layouts/Dimension">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//layouts/Dimension/width"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//layouts/Dimension/height"/>
+      </genClasses>
+      <genClasses dynamic="true" ecoreClass="tm.ecore#//layouts/Rectangle"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Util" disposableProviderFactory="true" multipleEditorPages="false"
+        generateModelWizard="false" ecorePackage="tm.ecore#//util">
+      <genDataTypes ecoreDataType="tm.ecore#//util/LimitedString"/>
+      <genDataTypes ecoreDataType="tm.ecore#//util/URI"/>
+      <genClasses ecoreClass="tm.ecore#//util/ListData">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//util/ListData/dataObjects"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//util/TreeData">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//util/TreeData/parentDataObject"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//util/TreeData/leaf"/>
+      </genClasses>
+      <genClasses ecoreClass="tm.ecore#//util/ObjectData">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//util/ObjectData/dataObject"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//util/Scripted">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//util/Scripted/scriptSource"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tm.ecore#//widgets/Labeled">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Labeled/text"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//widgets/Labeled/image"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

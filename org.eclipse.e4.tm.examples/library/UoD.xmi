@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<lib:UoD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lib="http://www.eclipse.org/e4/tm/examples/library/lib.ecore" xsi:schemaLocation="http://www.eclipse.org/e4/tm/examples/library/lib.ecore lib.ecore">
+  <allLibraries name="University Library">
+    <books title="The Origin of the Species" author="//@allAuthors.0"/>
+  </allLibraries>
+  <allAuthors name="Darwin"/>
+</lib:UoD>

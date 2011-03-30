@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="feature_export" name="build">
+	<target name="feature_export">
+		<pde.exportFeatures destination="/Users/hal/java/workspaces/playtrd/no.playtrd.feature" exportSource="false" exportType="zip" features="no.playtrd.feature,org.eclipse.e4.emf.javascript.feature,org.eclipse.e4.tm.feature" filename="eclipse.zip" useJARFormat="true"/>
+	</target>
+</project>

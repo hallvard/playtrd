@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/no.playtrd/src"
+    modelPluginID="no.playtrd" modelName="Osm" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>osm.ecore</foreignModel>
+  <genPackages prefix="Osm" basePackage="org.openstreetmap" resource="XML" disposableProviderFactory="true"
+      ecorePackage="osm.ecore#/">
+    <genClasses ecoreClass="osm.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Node/latitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Node/longitude"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//Way">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference osm.ecore#//Way/nodes"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//OSMElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//OSMElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//OSMElement/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//OSMElement/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//OSMElement/user"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference osm.ecore#//OSMElement/tags"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//Tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Tag/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Tag/value"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//Relation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference osm.ecore#//Relation/members"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//Member">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference osm.ecore#//Member/reference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Member/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Member/role"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//Bounds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Bounds/minLatitute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Bounds/minLongitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Bounds/maxLatitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//Bounds/maxLongitude"/>
+    </genClasses>
+    <genClasses ecoreClass="osm.ecore#//OSM">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference osm.ecore#//OSM/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference osm.ecore#//OSM/ways"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference osm.ecore#//OSM/relations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference osm.ecore#//OSM/bounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//OSM/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute osm.ecore#//OSM/generator"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

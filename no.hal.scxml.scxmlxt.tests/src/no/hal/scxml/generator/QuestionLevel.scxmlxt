@@ -1,0 +1,19 @@
+->idle {
+	->ask on [[thisGame.currentLevel == thisLevel]];
+}
+ask {
+	on enter do {{
+		gui.question = thisLevel.question;
+		gui.feedback = null;
+	}};
+	on [[gui.answer]] if [[gui.answer != thisLevel.answer]]	do {{
+		gui.feedback = "Wrong answer, try again";
+	}};
+	->correct on [[gui.answer == thisLevel.answer]];
+}
+correct {
+	on enter do {{
+		gui.feedback = "Correct!";
+		thisLevel.answered = true;
+	}};
+}

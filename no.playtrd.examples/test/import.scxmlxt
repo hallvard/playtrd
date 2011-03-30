@@ -1,0 +1,2 @@
+domain model "import.ecore";
+var test : Import = 1;

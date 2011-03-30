@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Compile no.playtrd.feature" default="main">
+	<target name="main">
+		<ant antfile="build.xml" dir="../org.jscience" target="build.jars"/>
+		<ant antfile="build.xml" dir="../no.hal.scxmljavascript" target="build.jars"/>
+		<ant antfile="build.xml" dir="../no.playtrd" target="build.jars"/>
+		<ant antfile="build.xml" dir="../../e4/org.eclipse.e4.tm" target="build.jars"/>
+		<ant antfile="build.xml" dir="../../e4/org.eclipse.e4.tm.builder" target="build.jars"/>
+		<ant antfile="build.xml" dir="../../e4/org.eclipse.e4.emf.javascript" target="build.jars"/>
+		<ant antfile="build.xml" dir="../no.hal.swingxmap" target="build.jars"/>
+		<ant antfile="build.xml" dir="../../e4/org.eclipse.e4.tm.ui" target="build.jars"/>
+		<ant antfile="build.xml" dir="../../e4/org.eclipse.e4.emf.javascript.ui" target="build.jars"/>
+		<ant antfile="build.xml" dir="../no.playtrd.ui" target="build.jars"/>
+	</target>
+</project>

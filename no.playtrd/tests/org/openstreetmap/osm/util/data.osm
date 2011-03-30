@@ -1,0 +1,187 @@
+<?xml version='1.0' standalone='no'?>
+<osm version='0.6' generator='xapi: OSM Extended API 2.0' xmlns:xapi='http://www.informationfreeway.org/xapi/0.6' xapi:uri='/api/0.6/node[amenity=cafe|restaurant][bbox=10.3738,63.4116,10.4184,63.4364]' xapi:planetDate='200910181335' xapi:copyright='2009 OpenStreetMap contributors' xapi:instance='zappyHyper'>
+  <node id='441595801' lat='63.4283242' lon='10.3866981' user='Rune Andersen' xapi:users='Rune Andersen' timestamp='2009-07-16T17:42:10Z' uid='21866' version='3' changeset='1846256'>
+    <tag k='amenity' v='cafe'/>
+  </node>
+  <node id='220920781' lat='63.433451' lon='10.400152' user='Bernt' xapi:users='Bernt' timestamp='2008-01-12T14:23:19Z' version='1'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='name' v='Dromedar Kaffebar'/>
+  </node>
+  <node id='270521794' lat='63.4308278' lon='10.3976264' user='Bernt' xapi:users='Bernt' timestamp='2008-06-15T18:51:52Z' uid='11797' version='1' changeset='173811'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='name' v='Dromedar'/>
+  </node>
+  <node id='270521795' lat='63.4312382' lon='10.3975631' user='Bernt' xapi:users='Bernt' timestamp='2008-06-15T18:51:53Z' uid='11797' version='1' changeset='173811'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='name' v='Somma'/>
+  </node>
+  <node id='270521796' lat='63.4321063' lon='10.3968812' user='Helge Hafting' xapi:users='Bernt,Helge Hafting' timestamp='2009-04-28T09:26:24Z' uid='19565' version='2'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='name' v='Bristol'/>
+  </node>
+  <node id='220916220' lat='63.4282629' lon='10.4033844' user='Helge Hafting' xapi:users='Bernt,Helge Hafting' timestamp='2009-06-04T13:48:19Z' uid='19565' version='2' changeset='1420492'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='name' v='Dromedar Kaffebar'/>
+  </node>
+  <node id='270521797' lat='63.4274551' lon='10.3936296' user='Bernt' xapi:users='Bernt' timestamp='2008-06-15T18:51:53Z' uid='11797' version='1' changeset='173811'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='name' v='9 Muser'/>
+  </node>
+  <node id='415597141' lat='63.4283604' lon='10.4034126' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-06-04T13:48:19Z' uid='19565' version='1' changeset='1420492'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='name' v='Choco Boco'/>
+  </node>
+  <node id='447881767' lat='63.4273456' lon='10.4106448' user='Rune Andersen' xapi:users='Rune Andersen' timestamp='2009-07-25T17:28:20Z' uid='21866' version='2' changeset='1935981'>
+    <tag k='alt_name' v='Festningskaféen'/>
+    <tag k='amenity' v='cafe'/>
+    <tag k='name' v='Vertshuset Festningen'/>
+  </node>
+  <node id='33209389' lat='63.4223252' lon='10.3957704' user='Magne' xapi:users='Magne' timestamp='2008-07-19T12:00:32Z' uid='204' version='2' changeset='535820'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='name' v='Edgar'/>
+  </node>
+  <node id='446848531' lat='63.4201642' lon='10.3934046' user='Rune Andersen' xapi:users='Rune Andersen' timestamp='2009-07-24T11:56:08Z' uid='21866' version='1' changeset='1923981'>
+    <tag k='amenity' v='cafe'/>
+  </node>
+  <node id='431038572' lat='63.4169296' lon='10.404283' user='Espenso' xapi:users='Rune Andersen,Espenso' timestamp='2009-10-15T10:01:32Z' uid='176415' version='4' changeset='2852590'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='cuisine' v='coffee_shop'/>
+    <tag k='level' v='1'/>
+    <tag k='name' v='Cafe-sito Stripa'/>
+    <tag k='operator' v='Studentsamskipnaden i Trondheim'/>
+  </node>
+  <node id='431912400' lat='63.4158091' lon='10.4068851' user='magnunor' xapi:users='Rune Andersen,magnunor' timestamp='2009-10-15T13:06:49Z' uid='185205' version='3' changeset='2854089'>
+    <tag k='amenity' v='cafe'/>
+    <tag k='cuisine' v='coffee_shop'/>
+    <tag k='level' v='-1'/>
+    <tag k='name' v='Cafe-sito Realfag'/>
+    <tag k='operator' v='Studentsamskipnaden i Trondheim'/>
+  </node>
+  <node id='377749337' lat='63.4307690' lon='10.3918860' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-16T10:32:09Z' uid='19565' version='1' changeset='581466'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='regional'/>
+    <tag k='name' v='Egon'/>
+  </node>
+  <node id='380355308' lat='63.4306906' lon='10.3906721' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-22T09:05:35Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='italian'/>
+    <tag k='name' v='Napoli'/>
+  </node>
+  <node id='385719799' lat='63.4317944' lon='10.3905251' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-27T08:57:42Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='thai'/>
+    <tag k='name' v='Bankok cafe'/>
+  </node>
+  <node id='385719944' lat='63.4302163' lon='10.3899054' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-27T08:57:46Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='asian'/>
+    <tag k='name' v='Mien Trung Cafe'/>
+  </node>
+  <node id='177506613' lat='63.4339698' lon='10.3966204' user='Bernt' xapi:users='Bernt' timestamp='2007-12-18T20:50:37Z' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='name' v='Credo'/>
+  </node>
+  <node id='248045456' lat='63.4300469' lon='10.4020851' user='Helge Hafting' xapi:users='Magne,Helge Hafting' timestamp='2009-04-21T22:47:03Z' uid='19565' version='4'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='cuisine' v='pizza'/>
+    <tag k='name' v='Peppes Pizza'/>
+  </node>
+  <node id='279474501' lat='63.4321760' lon='10.3958357' user='Magne' xapi:users='Magne' timestamp='2008-07-19T11:52:55Z' uid='204' version='1' changeset='535820'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='sushi'/>
+    <tag k='name' v='Kyoto'/>
+  </node>
+  <node id='283156625' lat='63.4339495' lon='10.3972689' user='xybot' xapi:users='Magne,xybot' timestamp='2008-10-10T12:33:00Z' uid='70696' version='2' changeset='238039'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='created_by' v='xybot'/>
+    <tag k='name' v='Carl Johan'/>
+  </node>
+  <node id='283156634' lat='63.4340045' lon='10.3972477' user='Magne' xapi:users='Magne' timestamp='2008-08-03T18:14:20Z' uid='204' version='1' changeset='37888'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='pizza'/>
+    <tag k='name' v='Dolly Dimples'/>
+  </node>
+  <node id='379817461' lat='63.4322393' lon='10.4039542' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-21T22:34:52Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='italian'/>
+    <tag k='name' v='AiSuma'/>
+  </node>
+  <node id='386579882' lat='63.4307537' lon='10.3942716' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-28T09:26:22Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='pizza'/>
+    <tag k='name' v='Lille'/>
+  </node>
+  <node id='386579886' lat='63.4322275' lon='10.3943685' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-28T09:26:22Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='italian'/>
+    <tag k='name' v='Frati'/>
+  </node>
+  <node id='386579900' lat='63.4318919' lon='10.3983669' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-28T09:26:22Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='regional'/>
+    <tag k='name' v='Jonathan'/>
+  </node>
+  <node id='530950126' lat='63.4328257' lon='10.3988625' user='MagS' xapi:users='MagS' timestamp='2009-10-14T22:25:20Z' uid='185675' version='1' changeset='2850419'>
+    <tag k='addr:housenumber' v='12'/>
+    <tag k='addr:postcode' v='7010'/>
+    <tag k='addr:street' v='Thomas Angells gate'/>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='name' v='Graffi Grill og Bar'/>
+  </node>
+  <node id='258198004' lat='63.4335656' lon='10.4085933' user='Bernt' xapi:users='Bernt' timestamp='2008-04-17T22:43:48Z' uid='11797' version='1' changeset='173313'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='name' v='Ørens Kro'/>
+  </node>
+  <node id='270521803' lat='63.4342708' lon='10.4109980' user='Bernt' xapi:users='Bernt' timestamp='2008-06-15T18:51:58Z' uid='11797' version='1' changeset='173811'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='name' v='Dokkhuset'/>
+  </node>
+  <node id='387527206' lat='63.4309164' lon='10.4141915' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-04-29T22:22:07Z' uid='19565' version='1'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='cuisine' v='pizza'/>
+    <tag k='name' v='Milano'/>
+  </node>
+  <node id='34926022' lat='63.4277903' lon='10.4029451' user='duplex' xapi:users='Magne,duplex' timestamp='2009-09-29T20:06:44Z' uid='179482' version='2' changeset='2681176'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='name' v='Olaf&apos;s Noreg pizza'/>
+  </node>
+  <node id='246234243' lat='63.4289161' lon='10.4011808' user='stian' xapi:users='Helge Hafting,stian' timestamp='2009-08-30T12:50:18Z' uid='165279' version='3' changeset='2312418'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='created_by' v='JOSM'/>
+    <tag k='name' v='Havfruen'/>
+  </node>
+  <node id='415597143' lat='63.4285136' lon='10.4028674' user='Helge Hafting' xapi:users='Helge Hafting' timestamp='2009-06-04T13:48:19Z' uid='19565' version='1' changeset='1420492'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='name' v='Kaktus'/>
+  </node>
+  <node id='439766281' lat='63.4187004' lon='10.4038682' user='magnunor' xapi:users='Rune Andersen,magnunor' timestamp='2009-10-15T20:06:16Z' uid='185205' version='3' changeset='2858325'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='level' v='1'/>
+    <tag k='name' v='SiT Kafe Kjelhuset'/>
+    <tag k='operator' v='Studentsamskipnaden i Trondheim'/>
+  </node>
+  <node id='439766280' lat='63.4180522' lon='10.4012461' user='magnunor' xapi:users='Rune Andersen,magnunor' timestamp='2009-10-15T20:06:16Z' uid='185205' version='2' changeset='2858325'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='level' v='1'/>
+    <tag k='name' v='SiT Kafe Elektro (Magneten)'/>
+    <tag k='operator' v='Studentsamskipnaden i Trondheim'/>
+  </node>
+  <node id='439766273' lat='63.4168335' lon='10.4047122' user='Espenso' xapi:users='Rune Andersen,Espenso' timestamp='2009-10-15T10:01:25Z' uid='176415' version='2' changeset='2852590'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='level' v='1'/>
+    <tag k='name' v='SiT Kafe Hangaren'/>
+    <tag k='operator' v='Studentsamskipnaden i Trondheim'/>
+  </node>
+  <node id='439766278' lat='63.4156248' lon='10.4045763' user='magnunor' xapi:users='Rune Andersen,magnunor' timestamp='2009-10-15T13:06:49Z' uid='185205' version='2' changeset='2854089'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='level' v='1'/>
+    <tag k='name' v='SiT Kafe Realfag'/>
+    <tag k='operator' v='Studentsamskipnaden i Trondheim'/>
+  </node>
+</osm>

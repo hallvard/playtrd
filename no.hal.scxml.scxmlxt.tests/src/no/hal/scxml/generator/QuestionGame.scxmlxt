@@ -1,0 +1,24 @@
+// refine inherited init state
+->init {
+	->active on [[thisGame.currentLevel]];
+}
+
+// introduce additional states
+active {
+	on [[thisGame.currentLevel != null && thisGame.currentLevel.answered]] do {{
+		thisGame.gui.answer = null;
+		thisGame.finishedLevels.add(thisGame.currentLevel);
+		if (thisGame.finishedLevels.size() < thisGame.levels.size()) {
+			thisGame.currentLevel = thisGame.levels[thisGame.finishedLevels.size()];
+		} else {
+			thisGame.currentLevel = null;
+		}
+	}};
+	->finished on [[thisGame.finishedLevels.size() == thisGame.levels.size()]];
+}
+finished {
+	on enter do {{
+		thisGame.gui.question = null;
+		thisGame.gui.feedback = "Finished!";
+	}};
+}

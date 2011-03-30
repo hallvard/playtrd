@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml"
+       xmlns:cs="http://commons.apache.org/scxml"
+       xmlns:js="http://www.mozilla.org/rhino"
+       version="1.0" initialstate="init">
+    <state id="init">
+		<onentry>
+	   		<cs:var name="counter" expr="0"/>
+	   		<cs:var name="sum" expr="0"/>
+	   		<cs:var name="result" expr="0"/>
+	   	</onentry>
+        <initial>
+            <transition target="loop"/>
+        </initial>
+	    <state id="loop">
+			<onentry>
+		   		<assign name="counter" expr="counter + 1"/>
+		   		<assign name="sum" expr="sum + counter"/>
+		   	</onentry>
+	        <transition target="loop" cond="counter &lt; 5"/>
+	        <transition target="stop" cond="counter &gt;= 5"/>
+	    </state>
+	    <state id="stop" final="true">
+			<onentry>
+		   		<js:script>
+		   		result = counter + sum;
+		   		</js:script>
+		   		<js:scriptTest expected="5.0" expr="counter"/>
+		   		<js:scriptTest expected="15.0" expr="sum"/>
+		   		<js:scriptTest expected="20.0" expr="result"/>
+		   	</onentry>
+	    </state>
+    </state>
+</scxml>

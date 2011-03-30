@@ -1,0 +1,55 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package no.hal.scxml.scxmlxt;
+
+import org.eclipse.emf.common.util.URI;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Resource Uri Literal</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link no.hal.scxml.scxmlxt.ResourceUriLiteral#getResourceUri <em>Resource Uri</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see no.hal.scxml.scxmlxt.ScxmlxtPackage#getResourceUriLiteral()
+ * @model
+ * @generated
+ */
+public interface ResourceUriLiteral extends AbstractUriLiteral {
+
+	/**
+	 * Returns the value of the '<em><b>Resource Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resource Uri</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resource Uri</em>' attribute.
+	 * @see #setResourceUri(URI)
+	 * @see no.hal.scxml.scxmlxt.ScxmlxtPackage#getResourceUriLiteral_ResourceUri()
+	 * @model dataType="no.hal.scxml.scxmlxt.EURI"
+	 * @generated
+	 */
+	URI getResourceUri();
+
+	/**
+	 * Sets the value of the '{@link no.hal.scxml.scxmlxt.ResourceUriLiteral#getResourceUri <em>Resource Uri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Resource Uri</em>' attribute.
+	 * @see #getResourceUri()
+	 * @generated
+	 */
+	void setResourceUri(URI value);
+} // ResourceUriLiteral

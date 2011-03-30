@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: no.hal.scxml.scxmlxt.tests
+Bundle-Version: 0.9.0.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: no.hal.scxml;bundle-version="0.9.0",
+ org.mozilla.javascript;bundle-version="1.7.2",
+ org.apache.commons.logging;bundle-version="1.0.4",
+ no.hal.scxml.javascript;bundle-version="0.9.0",
+ org.eclipse.emf.ecore;bundle-version="2.6.0",
+ org.eclipse.e4.emf.javascript;bundle-version="0.9.0",
+ no.hal.scxml.emf.javascript;bundle-version="0.9.0",
+ no.hal.scxml.scxmlxt;bundle-version="0.9.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0"

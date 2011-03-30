@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scxml
+Bundle-SymbolicName: no.hal.scxml
+Bundle-Version: 0.9.0.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ClassPath: libs/commons-scxml-0.9.jar,
+ libs/commons-beanutils-1.8.0.jar,
+ libs/commons-digester-1.8.jar
+Export-Package: org.apache.commons.digester;version="1.8.0",
+ org.apache.commons.scxml,
+ org.apache.commons.scxml.env,
+ org.apache.commons.scxml.io,
+ org.apache.commons.scxml.model
+Require-Bundle: org.apache.commons.logging;bundle-version="1.0.4"

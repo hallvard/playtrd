@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/no.hal.scxml.scxmlxt/src"
+    editDirectory="" editorDirectory="" modelPluginID="no.hal.scxml.scxmlxt" modelName="Scxmlxt"
+    testsDirectory="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" editorPluginID="no.hal.scxml.scxmlxt.edit" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>scxmlxt.ecore</foreignModel>
+  <genPackages prefix="Scxmlxt" basePackage="no.hal.scxml" disposableProviderFactory="true"
+      ecorePackage="scxmlxt.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scxmlxt.ecore#//TimeUnit">
+      <genEnumLiterals ecoreEnumLiteral="scxmlxt.ecore#//TimeUnit/ms"/>
+      <genEnumLiterals ecoreEnumLiteral="scxmlxt.ecore#//TimeUnit/s"/>
+      <genEnumLiterals ecoreEnumLiteral="scxmlxt.ecore#//TimeUnit/m"/>
+      <genEnumLiterals ecoreEnumLiteral="scxmlxt.ecore#//TimeUnit/h"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="scxmlxt.ecore#//EURI"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//StateMachine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//StateMachine/importURI"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//State">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//State/initialTransition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//State/name"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//InitialTransition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//InitialTransition/action"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//AbstractState">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//AbstractState/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//AbstractState/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//AbstractState/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//AbstractTransition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//AbstractTransition/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//AbstractTransition/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//AbstractTransition/action"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//Transition/target"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//InternalTransition"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//Event"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//SymbolicEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//SymbolicEvent/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="scxmlxt.ecore#//AbstractTransitionEvent">
+      <genOperations ecoreOperation="scxmlxt.ecore#//AbstractTransitionEvent/getSource"/>
+      <genOperations ecoreOperation="scxmlxt.ecore#//AbstractTransitionEvent/getTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//TransitionEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//TransitionEvent/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//TransitionEvent/target"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//EnterEvent"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//ExitEvent"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//ScriptEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//ScriptEvent/script"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//TimerEvent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//TimerEvent/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//TimerEvent/delay"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//Condition/script"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//Action"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//SymbolicAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//SymbolicAction/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//SymbolicAction/delay"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//ScriptAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//ScriptAction/script"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//Typed">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//Typed/eType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//Typed/many"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//VarDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//VarDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxmlxt.ecore#//VarDef/init"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//Expression"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//Literal"/>
+    <genClasses ecoreClass="scxmlxt.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//BooleanLiteral/booleanValue"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//IntLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//IntLiteral/intValue"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//FloatLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//FloatLiteral/floatValue"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//StringLiteral/stringValue"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//ScriptExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//ScriptExpression/script"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//AbstractUriLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//AbstractUriLiteral/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//UriLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//UriLiteral/uriValue"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//ResourceUriLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//ResourceUriLiteral/resourceUri"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//EObjectUriLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//EObjectUriLiteral/uriFragment"/>
+    </genClasses>
+    <genClasses ecoreClass="scxmlxt.ecore#//DelayLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxmlxt.ecore#//DelayLiteral/timeUnit"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

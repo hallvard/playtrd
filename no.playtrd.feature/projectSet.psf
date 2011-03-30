@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.team.svn.core.svnnature">
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml,no.hal.scxml,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml.emf.javascript,no.hal.scxml.emf.javascript,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml.javascript,no.hal.scxml.javascript,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml.javascript.tests,no.hal.scxml.javascript.tests,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml.scxmlxt,no.hal.scxml.scxmlxt,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml.scxmlxt.tests,no.hal.scxml.scxmlxt.tests,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.scxml.scxmlxt.ui,no.hal.scxml.scxmlxt.ui,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.hal.swingxmap,no.hal.swingxmap,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.playtrd,no.playtrd,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.playtrd.examples,no.playtrd.examples,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.playtrd.feature,no.playtrd.feature,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/no.playtrd.ui,no.playtrd.ui,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+<project reference="1.0.1,http://basar.idi.ntnu.no/svn/playtrd/trunk/org.jscience,org.jscience,801ae6caba31001f13fa860fd3d3376c;http://basar.idi.ntnu.no/svn/playtrd;http://basar.idi.ntnu.no/svn/playtrd;branches;tags;trunk;true;fc0a3899-b531-df11-a388-0050569f7fc2;http://basar.idi.ntnu.no/svn/playtrd;;false;;;22"/>
+</provider>
+<provider id="org.eclipse.team.cvs.core.cvsnature">
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/bundles/org.eclipse.e4.emf.javascript,org.eclipse.e4.emf.javascript"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/tests/org.eclipse.e4.emf.javascript.tests,org.eclipse.e4.emf.javascript.tests"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/bundles/org.eclipse.e4.emf.javascript.ui,org.eclipse.e4.emf.javascript.ui"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/bundles/org.eclipse.e4.tm,org.eclipse.e4.tm"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/bundles/org.eclipse.e4.tm.builder,org.eclipse.e4.tm.builder"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/examples/org.eclipse.e4.tm.examples,org.eclipse.e4.tm.examples"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,e4/org.eclipse.e4.tm/bundles/org.eclipse.e4.tm.ui,org.eclipse.e4.tm.ui"/>
+</provider>
+</psf>

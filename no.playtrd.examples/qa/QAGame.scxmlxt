@@ -1,0 +1,4 @@
+->init {
+	on enter do {{
+	}};
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<game:QuestionGame xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:game="http://no.hal/game.ecore" xsi:schemaLocation="http://no.hal/game.ecore Game.ecore">
+  <levels xsi:type="game:QuestionLevel" name="level1" question="What is the color of the side of the moon facing away from earth" answer="Dark"/>
+  <levels xsi:type="game:QuestionLevel" name="level2" question="How many surrealists does it take to change a light bulb?" answer="The fish"/>
+  <gui xsi:type="game:QuestionGUI"/>
+</game:QuestionGame>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scxml Javascript
+Bundle-SymbolicName: no.hal.scxml.javascript
+Bundle-Version: 0.9.0.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ClassPath: .
+Require-Bundle: no.hal.scxml;bundle-version="0.9.0",
+ org.mozilla.javascript;bundle-version="1.7.2"
+Export-Package: no.hal.scxml.javascript
+Import-Package: org.apache.commons.logging

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://playtrd.no/v10/playtrd.ecore" 
+            class="no.playtrd.v10.playtrd.impl.PlaytrdPackageImpl"
+            genModel="model/playtrd.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.openstreetmap.org/v06/osm.ecore" 
+            class="org.openstreetmap.osm.impl.OsmPackageImpl"
+            genModel="model/osm.genmodel"/>
+   </extension>
+
+</plugin>

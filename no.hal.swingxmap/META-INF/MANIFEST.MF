@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Swingxmap
+Bundle-SymbolicName: no.hal.swingxmap;singleton:=true
+Bundle-Version: 0.9.0.qualifier
+Bundle-Activator: swingxmap.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.jscience;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ClassPath: .,
+ libs/swing-worker.jar,
+ libs/swingx-bean.jar,
+ libs/swingx-ws-2008_12_14.jar,
+ libs/swingx.jar
+Export-Package: swingxmap

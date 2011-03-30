@@ -1,0 +1,13 @@
+domain model "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore";
+
+->init {
+	on enter if [[thisGame.currentLevel == null]] do {{
+		thisGame.currentLevel = thisGame.levels[0];
+	}};
+}
+
+//->timertest {
+//	var count : EInt = 2;
+//	on t > 20ms after enter
+//	do timertest.count = 4;
+//}

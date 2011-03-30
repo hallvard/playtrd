@@ -1,0 +1,132 @@
+«IMPORT scxmlxtext»;
+
+«EXTENSION templates::Extensions»;
+
+«DEFINE main FOR StateMachine»
+	«FILE "output.xml"»
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:cs="http://commons.apache.org/scxml" version="1.0"
+	initial="root">
+	«EXPAND state("root") FOR this»
+</scxml>
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE state FOR State»
+	«EXPAND state(this.name) FOR this»
+«ENDDEFINE»
+
+«DEFINE state(String name) FOR AbstractState»
+	<state id="«name»">
+		«EXPAND variable FOREACH this.variables»
+		«EXPAND states(name) FOR this»
+		«EXPAND transition(this) FOREACH this.transitions»
+	</state>
+«ENDDEFINE»
+
+«DEFINE states(String name) FOR AbstractState»
+	«LET initialStates(this) AS initialStates»
+		«IF initialStates.size == 1»
+			«EXPAND regionStates FOREACH initialStates»
+		«ELSEIF initialStates.size > 1»
+			<parallel id="«name»Regions">
+			«EXPAND region FOREACH initialStates»
+			</parallel>
+		«ENDIF»
+	«ENDLET»
+«ENDDEFINE»
+
+«DEFINE region FOR State»
+	<state id="«this.name»Region">
+		«EXPAND regionStates FOR this»
+	</state>
+«ENDDEFINE»
+
+«DEFINE regionStates FOR State»
+	«EXPAND initialState FOR this»
+	«LET this.computeStateClosure() AS regionStates»
+		«EXPAND state FOREACH regionStates»
+	«ENDLET»
+«ENDDEFINE»
+
+«DEFINE initialState FOR State»
+	<initial>
+		<transition target="«this.name»">
+			«IF this.initialTransition.action != null»
+				«EXPAND action FOR this.initialTransition.action»
+			«ENDIF»
+		</transition>
+	</initial>
+«ENDDEFINE»
+
+«DEFINE transition(AbstractState parent) FOR AbstractTransition»
+	«EXPAND transition FOR this»
+«ENDDEFINE»
+
+«DEFINE transition(AbstractState parent) FOR InternalTransition»
+	«IF this.event != null && this.event.metaType == TriggerEvent»
+		«LET ((TriggerEvent)this.event) AS triggerEvent»
+			«IF triggerEvent.source == null && triggerEvent.target == parent»
+				<onentry>
+					«EXPAND action FOR this.action»
+				</onentry>
+			«ELSEIF triggerEvent.source == parent && triggerEvent.target == null»
+				<onexit>
+					«EXPAND action FOR this.action»
+				</onexit>
+			«ELSE»
+				«EXPAND transition FOR this»
+			«ENDIF»
+		«ENDLET»
+	«ELSE»
+		«EXPAND transition FOR this»
+	«ENDIF»
+«ENDDEFINE»
+
+«DEFINE transition FOR AbstractTransition»
+	<transition 
+		«IF this.event != null»
+			«EXPAND event FOR this.event»
+		«ENDIF»
+		«EXPAND target FOR this»
+		>
+		«IF this.action != null»
+			«EXPAND action FOR this.action»
+		«ENDIF»
+	</transition>
+«ENDDEFINE»
+
+«DEFINE target FOR AbstractTransition»«ENDDEFINE»
+«DEFINE target FOR Transition»
+	target="«this.target.name»"
+«ENDDEFINE»
+
+«DEFINE event FOR Event»«ENDDEFINE»
+«DEFINE event FOR SymbolicEvent»
+	event="«this.name»"
+«ENDDEFINE»
+«DEFINE event FOR ScriptEvent»
+	event="«this.script»"
+«ENDDEFINE»
+
+«DEFINE action FOR Action»«ENDDEFINE»
+«DEFINE action FOR SymbolicAction»
+	<send event="«this.name»"/>
+«ENDDEFINE»
+«DEFINE action FOR ScriptAction»
+	<script>«this.script»</script>
+«ENDDEFINE»
+
+«DEFINE variable FOR VarDef»
+	<cs:var name="«this.name»" expr="
+	«IF this.init != null»
+		«EXPAND expr FOR this.init»
+	«ENDIF»
+	"/>
+«ENDDEFINE»
+
+«DEFINE expr FOR Expression»«ENDDEFINE»
+«DEFINE expr FOR BooleanLiteral»  «this.booleanValue»«ENDDEFINE»
+«DEFINE expr FOR IntLiteral»      «this.intValue»    «ENDDEFINE»
+«DEFINE expr FOR FloatLiteral»    «this.floatValue»  «ENDDEFINE»
+«DEFINE expr FOR StringLiteral»   «this.stringValue» «ENDDEFINE»
+«DEFINE expr FOR ScriptExpression»«this.script»      «ENDDEFINE»

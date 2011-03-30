@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<playtrd:Playtrd xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:playtrd="http://playtrd.no/v10/playtrd.ecore" xmlns:qa="platform:/resource/no.playtrd.examples/qa/QA.ecore">
+  <communities>
+    <players name="hal"/>
+  </communities>
+  <games xsi:type="qa:QAGame">
+    <players xsi:type="qa:QAGamePlayerState" player="//@communities.0/@players.0">
+      <gui/>
+    </players>
+    <qas question="Hva slags ost er m&#xe5;nen laget av?" answer="Roquefort"/>
+    <qas question="Hvilken farge er baksiden av m&#xe5;nen?" answer="M&#xf8;rk"/>
+    <qas question="Hvor mange surrealister trengs for &#xe5; skifte lysp&#xe6;re?" answer="Fisken"/>
+  </games>
+</playtrd:Playtrd>

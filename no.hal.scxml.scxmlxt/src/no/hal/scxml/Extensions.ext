@@ -1,0 +1,35 @@
+import scxmlxtext;
+
+Collection[State] initialStates(AbstractState this) :
+	this.states.select(state | state.initialTransition != null);
+
+cached State subStateOf(State this, AbstractState parent) :
+	if this == null || this == parent then
+		null
+	else if this.eContainer == parent then
+		this
+	else
+		subStateOf((State)this.eContainer, parent);
+
+Collection[State] computeStateClosure(State this) :
+	let parent = (AbstractState)this.eContainer :
+		let closure = {} :
+			computeStateClosure(this, parent, closure) ->
+			closure;
+
+Void computeStateClosure(State this, AbstractState parent, Collection[State] closure) :
+	if (! closure.contains(this)) then
+		closure.add(this) ->
+		(let externalTransitions = this.transitions.typeSelect(Transition) :
+			externalTransitions.collect(t | computeStateClosure(t, parent, closure)) ->
+			this.states.collect(s | computeStateClosure(s, parent, closure)) ->
+			closure);
+
+Void computeStateClosure(Transition transition, AbstractState parent, Collection[State] closure) :
+	let targetParent = subStateOf(transition.target, parent) :
+		if (! closure.contains(targetParent)) then
+			computeStateClosure(targetParent, parent, closure) ->
+			computeStatesClosure(targetParent.states, parent, closure);
+
+Void computeStatesClosure(Collection[State] states, AbstractState parent, Collection[State] closure) :
+	states.collect(s | computeStateClosure(s, parent, closure) -> computeStatesClosure(s.states, parent, closure));

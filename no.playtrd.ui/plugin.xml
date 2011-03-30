@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<file-association
+			content-type="org.eclipse.emf.ecore.xmi"
+			file-extensions="playtrd"
+		/>
+	</extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+      		id="no.playtrd.runtime.ui.editor"
+            class="no.playtrd.runtime.editor.RuntimeEditorApplication"
+            contributorClass="org.eclipse.emf.ecore.presentation.EcoreActionBarContributor$Reflective"
+            default="false"
+            extensions="playtrd"
+            name="Playtrd application">
+         <contentTypeBinding contentTypeId="org.eclipse.emf.ecore.xmi"/>
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views">
+      <category name="Playtrd" id="no.playtrd.ui"/>
+   </extension>
+
+<!--   
+   <extension point="org.eclipse.ui.views">
+      <category name="Playtrd" id="no.playtrd.ui"/>
+      <view
+      	id="no.playtrd.ui.PositionMapView"
+        name="Position Map View"
+        category="no.playtrd.ui"
+        class="no.playtrd.ui.PositionMapView"
+       />
+   </extension>
+-->
+   <extension point="org.eclipse.ui.views">
+      <view
+      	id="no.playtrd.ui.PositionServiceMapView"
+        name="Position Service Map View"
+        category="no.playtrd.ui"
+        class="no.playtrd.ui.PositionServiceMapView"
+       />
+   </extension>
+
+</plugin>

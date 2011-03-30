@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/no.playtrd/src"
+    editDirectory="" editorDirectory="" modelPluginID="no.playtrd" modelName="Playtrd"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.e4.tm/model/tm/layouts.genmodel#//layouts platform:/plugin/no.hal.scxml.scxmlxt/model/scxmlxt.genmodel#//scxmlxt platform:/plugin/org.eclipse.e4.tm/model/tm/styles.genmodel#//styles platform:/plugin/org.eclipse.e4.tm/model/tm/util.genmodel#//util platform:/plugin/org.eclipse.e4.tm/model/tm/widgets.genmodel#//widgets">
+  <foreignModel>playtrd.ecore</foreignModel>
+  <genPackages prefix="Playtrd" basePackage="no.playtrd.v10" disposableProviderFactory="true"
+      ecorePackage="playtrd.ecore#/">
+    <genDataTypes ecoreDataType="playtrd.ecore#//GlobePosition"/>
+    <genDataTypes ecoreDataType="playtrd.ecore#//Money"/>
+    <genDataTypes ecoreDataType="playtrd.ecore#//IEditingDomainProvider"/>
+    <genClasses ecoreClass="playtrd.ecore#//ObjectPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//ObjectPosition/globePosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//ObjectPosition/positioned"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//Player/name"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Playtrd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Playtrd/regions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Playtrd/communities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Playtrd/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Playtrd/games"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Playtrd/uis"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//POI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//POI/name"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Region">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//Region/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Region/pois"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Game">
+      <genTypeParameters ecoreTypeParameter="playtrd.ecore#//Game/T"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//Game/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Game/players"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Game/stateMachine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Game/currentStates"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//PlayerState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//PlayerState/player"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Community">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//Community/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Community/players"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//PositionService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//PositionService/objectPositions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="playtrd.ecore#//Positioned"/>
+    <genClasses ecoreClass="playtrd.ecore#//MessageService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//MessageService/messages"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//PlayerMessage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//PlayerMessage/player"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//PlayerMessage/message"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Service"/>
+    <genClasses image="false" ecoreClass="playtrd.ecore#//Scripted">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//Scripted/scriptSource"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//LocationService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//LocationService/objectLocations"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//ObjectLocation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//ObjectLocation/positioned"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//ObjectLocation/target"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Item"/>
+    <genClasses ecoreClass="playtrd.ecore#//Wallet"/>
+    <genClasses ecoreClass="playtrd.ecore#//Store"/>
+    <genClasses ecoreClass="playtrd.ecore#//Owner"/>
+    <genClasses ecoreClass="playtrd.ecore#//Trade">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Trade/seller"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Trade/buyer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Trade/sellerWallet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Trade/sellerItems"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Trade/buyerItems"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//Trade/buyerWallet"/>
+      <genOperations ecoreOperation="playtrd.ecore#//Trade/perform"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//MoneyValued">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//MoneyValued/moneyValue"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Inventory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//Inventory/containedItems"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//Properties"/>
+    <genClasses ecoreClass="playtrd.ecore#//TagService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//TagService/metaData"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//TagData">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//TagData/poi"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//TagData/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//TagEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//TagEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute playtrd.ecore#//TagEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//ColocationService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference playtrd.ecore#//ColocationService/objectColocations"/>
+    </genClasses>
+    <genClasses ecoreClass="playtrd.ecore#//ObjectColocation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//ObjectColocation/positioned"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference playtrd.ecore#//ObjectColocation/targets"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

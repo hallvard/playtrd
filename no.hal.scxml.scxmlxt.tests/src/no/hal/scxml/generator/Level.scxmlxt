@@ -1,0 +1,5 @@
+// introduce variable and idle state
+var gui = [[thisGame.gui]];
+
+->idle {
+}

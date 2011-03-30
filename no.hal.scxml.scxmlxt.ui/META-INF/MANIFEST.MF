@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scxmlxt editor
+Bundle-Vendor: playtrd
+Bundle-Version: 0.9.0.qualifier
+Bundle-SymbolicName: no.hal.scxml.scxmlxt.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: no.hal.scxml;bundle-version="0.9.0",
+ no.hal.scxml.scxmlxt;visibility:=reexport,
+ org.eclipse.xtext.ui.ecore;bundle-version="1.0.2",
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.antlr.runtime,
+ org.eclipse.xtext.builder,
+ org.eclipse.emf.ecore.edit;bundle-version="2.6.0",
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: no.hal.scxml.ui,
+ no.hal.scxml.ui.contentassist.antlr
+Bundle-Activator: no.hal.scxml.ui.internal.ScxmlxtActivator

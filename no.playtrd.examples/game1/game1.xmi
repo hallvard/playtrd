@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<playtrd:Playtrd xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:playtrd="http://playtrd.no/v10/playtrd.ecore" xmlns:rebus="platform:/resource/no.playtrd.examples/game1/rebus.ecore">
+  <regions name="Midtbyen">
+    <pois name="Nidarosdomen"/>
+    <pois name="Torget"/>
+    <pois name="Brunhj&#xf8;rnet"/>
+    <pois name="Byhaven"/>
+    <pois name="Trondheim Torg"/>
+    <pois name="Ravnkloa"/>
+  </regions>
+  <communities name="playtrd">
+    <players name="hal"/>
+    <players name="hong"/>
+    <players name="meng"/>
+    <players name="bian"/>
+    <players name="alfinge"/>
+  </communities>
+  <services xsi:type="playtrd:PositionService">
+    <objectPositions globePosition="63.42709773303762 10.396928787231445" positioned="//@regions.0/@pois.0"/>
+    <objectPositions globePosition="63.43047630881692 10.395126342773438" positioned="//@regions.0/@pois.1"/>
+    <objectPositions globePosition="63.43059148051537 10.397529602050781" positioned="//@regions.0/@pois.2"/>
+    <objectPositions globePosition="63.433547395687796 10.396585464477539" positioned="//@regions.0/@pois.3"/>
+    <objectPositions globePosition="63.430322745832235 10.393838882446289" positioned="//@regions.0/@pois.4"/>
+    <objectPositions globePosition="63.43396964438991 10.393152236938477" positioned="//@regions.0/@pois.5"/>
+    <objectPositions positioned="//@communities.0/@players.0"/>
+    <objectPositions globePosition="63.428518319114026 10.396156311035156" positioned="//@communities.0/@players.1"/>
+    <objectPositions globePosition="63.430322745832235 10.394868850708008" positioned="//@communities.0/@players.2"/>
+    <objectPositions positioned="//@communities.0/@players.3"/>
+    <objectPositions globePosition="63.43431511597189 10.389461517333984" positioned="//@communities.0/@players.4"/>
+  </services>
+  <games xsi:type="rebus:Rebus" name="Rebus" pois="//@regions.0/@pois.3 //@regions.0/@pois.2 //@regions.0/@pois.1 //@regions.0/@pois.0" ordered="true">
+    <players player="//@communities.0/@players.1"/>
+    <players player="//@communities.0/@players.2"/>
+    <players player="//@communities.0/@players.3"/>
+    <players player="//@communities.0/@players.4"/>
+    <players player="//@communities.0/@players.0"/>
+  </games>
+</playtrd:Playtrd>

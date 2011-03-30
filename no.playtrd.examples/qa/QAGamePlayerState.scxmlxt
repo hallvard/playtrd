@@ -1,0 +1,49 @@
+// domain model "http://www.eclipse.org/emf/2002/Ecore";
+
+->init {
+	on enter if [[thisQAGamePlayerState.currentQA == null]] do {{
+		thisQAGamePlayerState.currentQA = thisQAGame.qas[0];
+	}};
+	->active on [[thisQAGamePlayerState.currentQA]];
+}
+
+active {
+	on [[thisQAGamePlayerState.currentQA != null && thisQAGamePlayerState.correctAnswer != null]] do {{
+		thisQAGamePlayerState.answers.add(thisQAGamePlayerState.correctAnswer);
+		thisQAGamePlayerState.currentQA = null;
+		thisQAGamePlayerState.correctAnswer = null;
+		if (thisQAGamePlayerState.answers.size() < thisQAGame.qas.size()) {
+			thisQAGamePlayerState.currentQA = thisQAGame.qas[thisQAGamePlayerState.answers.size()];
+		}
+	}};
+	->finished on [[thisQAGamePlayerState.answers.size() == thisQAGame.qas.size()]];
+}
+finished {
+	on enter do {{
+		thisQAGamePlayerState.gui.question = null;
+		thisQAGamePlayerState.gui.feedback = "Finished!";
+	}};
+}
+
+->idle {
+	->ask on [[thisQAGamePlayerState.currentQA != null && thisQAGamePlayerState.correctAnswer == null]];
+}
+ask {
+	on enter do {{
+		thisQAGamePlayerState.gui.question = thisQAGamePlayerState.currentQA.question;
+		thisQAGamePlayerState.gui.feedback = null;
+	}};
+	on [[thisQAGamePlayerState.gui.answer]]
+	if [[thisQAGamePlayerState.gui.answer != thisQAGamePlayerState.currentQA.answer]] do {{
+		thisQAGamePlayerState.gui.feedback = "Wrong answer, try again";
+	}};
+	->correct on [[thisQAGamePlayerState.gui.answer == thisQAGamePlayerState.currentQA.answer]];
+}
+correct {
+	on enter do {{
+		thisQAGamePlayerState.gui.feedback = "Correct!";
+		thisQAGamePlayerState.correctAnswer = thisQAGamePlayerState.gui.answer;
+		thisQAGamePlayerState.gui.answer = null;
+	}};
+	->idle on [[thisQAGamePlayerState.currentQA == null && thisQAGamePlayerState.correctAnswer == null]];
+}

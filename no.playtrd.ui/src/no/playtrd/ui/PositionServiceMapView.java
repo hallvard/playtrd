@@ -16,7 +16,6 @@ import no.playtrd.v10.playtrd.Service;
 import no.playtrd.v10.playtrd.impl.PlaytrdFactoryImpl;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.e4.emf.ecore.javascript.Activator;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.notify.Notification;

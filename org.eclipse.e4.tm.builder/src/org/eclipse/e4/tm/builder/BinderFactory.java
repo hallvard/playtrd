@@ -76,7 +76,7 @@ public abstract class BinderFactory {
 			} catch (Exception e) {
 			}
 			if (binder == null) {
-				Constructor<IBinder>[] constructors = c.getConstructors();
+				Constructor<IBinder>[] constructors = (Constructor<IBinder>[]) c.getConstructors();
 				for (int i = 0; i < constructors.length; i++) {
 					if (ReflectionSupport.hasSingleParameterForValue(constructors[i].getParameterTypes(), this, false)) {
 						try {

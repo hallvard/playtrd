@@ -29,9 +29,9 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.e4.emf.ecore.javascript.JavascriptSupport;
-import org.eclipse.e4.emf.ecore.javascript.ScriptClassLoader;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupport;
+import org.eclipse.emf.js4emf.ecore.ScriptClassLoader;
 import org.mozilla.javascript.CompilerEnvirons;
 import org.mozilla.javascript.optimizer.ClassCompiler;
 

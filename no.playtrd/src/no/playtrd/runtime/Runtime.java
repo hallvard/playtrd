@@ -1,11 +1,10 @@
 package no.playtrd.runtime;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.e4.emf.ecore.javascript.JavascriptSupport;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupport;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupportFactory;
 
 public class Runtime extends AbstractRuntime {
-
-	private JavascriptSupport javascriptSupport;
 
 	public Runtime(IAdaptable context) {
 		super(context);
@@ -14,15 +13,17 @@ public class Runtime extends AbstractRuntime {
 		addRuntimeComponent(new GenericServiceRuntimeComponent(this));
 	}
 
+	JavascriptSupport javascriptSupport;
+
 	private JavascriptSupport getJavascriptSupport() {
 		if (javascriptSupport == null) {
-			javascriptSupport = new JavascriptSupport();
+			javascriptSupport = JavascriptSupportFactory.getInstance().createJavascriptSupport();
 		}
 		return javascriptSupport;
 	}
 
 	@Override
-	public Object getAdapter(Class adapter) {
+	public Object getAdapter(@SuppressWarnings("rawtypes") Class adapter) {
 		if (adapter.equals(JavascriptSupport.class)) {
 			return getJavascriptSupport();
 		}

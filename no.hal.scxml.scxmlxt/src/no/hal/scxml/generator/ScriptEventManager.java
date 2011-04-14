@@ -38,7 +38,7 @@ public class ScriptEventManager implements SCXMLListener {
 		return new Action() {
 			public void execute(EventDispatcher evtDispatcher,
 					ErrorReporter errRep, SCInstance scInstance, Log appLog,
-					Collection derivedEvents) throws ModelException,
+					@SuppressWarnings("rawtypes") Collection derivedEvents) throws ModelException,
 					SCXMLExpressionException {
 				ScriptEventManager.this.scInstance = scInstance;
 			}
@@ -46,6 +46,7 @@ public class ScriptEventManager implements SCXMLListener {
 	}
 
 	public void onEntry(TransitionTarget target) {
+		System.out.println("Entering " + target.getId());
 		for (ScriptEventHandler scriptEventHandler: scriptEventHandlers) {
 			if (scriptEventHandler.getScxmlStateId().equals(target.getId())) {
 				scriptEventHandler.activateScriptHandler(this);
@@ -53,6 +54,7 @@ public class ScriptEventManager implements SCXMLListener {
 		}
 	}
 	public void onExit(TransitionTarget source) {
+		System.out.println("Exiting " + source.getId());
 		for (ScriptEventHandler scriptEventHandler: scriptEventHandlers) {
 			if (scriptEventHandler.getScxmlStateId().equals(source.getId())) {
 				scriptEventHandler.deactivateScriptHandler();

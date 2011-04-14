@@ -6,8 +6,9 @@ import no.playtrd.v10.playtrd.Game;
 
 import org.apache.commons.scxml.model.ModelException;
 import org.apache.commons.scxml.model.SCXML;
-import org.eclipse.e4.emf.ecore.javascript.JavascriptSupport;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupport;
 
 public class ScxmlRuntimeComponent extends AbstractRuntime.Component {
 
@@ -29,7 +30,7 @@ public class ScxmlRuntimeComponent extends AbstractRuntime.Component {
 
 	@Override
 	protected void doStart() {
-		scxmlRunner = new ScxmlRunner();
+		scxmlRunner = new ScxmlRunner(runtime.getContextAdapter(ResourceSet.class));
 		Game game = runtime.getContextAdapter(Game.class);
 		if (game == null) {
 			return;
@@ -38,7 +39,8 @@ public class ScxmlRuntimeComponent extends AbstractRuntime.Component {
 		try {
 			scxmlRunner.init(game, baseUri);
 			game.setStateMachine(scxmlRunner.getStateMachine());
-			scxmlRunner.setJavascriptSupport(runtime.getContextAdapter(JavascriptSupport.class));
+			JavascriptSupport javascriptSupport = runtime.getContextAdapter(JavascriptSupport.class);
+			scxmlRunner.setJavascriptSupport(javascriptSupport);
 			scxmlRunner.start();
 		} catch (ModelException e) {
 			System.err.println("Exception when starting " + this + ": " + e);

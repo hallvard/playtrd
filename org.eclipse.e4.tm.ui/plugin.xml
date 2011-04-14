@@ -47,12 +47,12 @@
       </editor>
    </extension>
 
+<!--
 	<extension point="org.eclipse.e4.tm.ui.postProcessor">
 		<postProcessor postProcessorClass="org.eclipse.e4.tm.ui.javascript.JavascriptPostProcessor"/>
-<!--
 		<postProcessor postProcessorClass="org.eclipse.e4.tm.ui.css.CssPostProcessor"/>
--->
 	</extension>
+-->
 
 	<extension 	point="org.eclipse.core.resources.natures"
    		id="TmNature"

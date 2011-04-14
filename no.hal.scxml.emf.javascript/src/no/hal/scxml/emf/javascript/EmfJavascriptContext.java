@@ -1,8 +1,12 @@
 package no.hal.scxml.emf.javascript;
 
-import no.hal.scxml.javascript.JavascriptContext;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupport;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupportFactory;
 
-import org.eclipse.e4.emf.ecore.javascript.JavascriptSupport;
+import no.hal.scxml.javascript.JavascriptContext;
 
 public class EmfJavascriptContext extends JavascriptContext {
 
@@ -10,10 +14,19 @@ public class EmfJavascriptContext extends JavascriptContext {
 	
 	public EmfJavascriptContext(JavascriptContext parentScope, JavascriptSupport javascriptSupport) {
 		super(parentScope);
-		this.javascriptSupport = javascriptSupport;
 	}
 
 	protected Object wrap(Object value) {
-		return javascriptSupport.wrap(value);
+		JavascriptSupport javascriptSupport = this.javascriptSupport;
+		if (javascriptSupport == null) {
+			if (value instanceof EObject) {
+				javascriptSupport = JavascriptSupportFactory.getInstance().getJavascriptSupport((EObject) value);
+			} else if (value instanceof Resource) {
+				javascriptSupport = JavascriptSupportFactory.getInstance().getJavascriptSupport((Resource) value);
+			} else if (value instanceof ResourceSet) {
+				javascriptSupport = JavascriptSupportFactory.getInstance().getJavascriptSupport((ResourceSet) value);
+			}
+		}
+		return (javascriptSupport != null ? javascriptSupport.getJsObject(value) : super.wrap(value));
 	}
 }

@@ -26,9 +26,10 @@ public class ScxmlTestCase extends TestCase {
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
 		EPackage.Registry.INSTANCE.put(ScxmlxtPackage.eNS_URI, ScxmlxtPackage.eINSTANCE);
-		scxmlRunner = new ScxmlRunner();
+		ResourceSetImpl resourceSet = new ResourceSetImpl();
+		scxmlRunner = new ScxmlRunner(resourceSet);
 		URI baseUri = URI.createURI(this.getClass().getResource(domainDataName).toString());
-		scxmlRunner.init(new ResourceSetImpl().getResource(URI.createURI(domainDataName).resolve(baseUri), true).getContents().get(0), baseUri);
+		scxmlRunner.init(resourceSet.getResource(URI.createURI(domainDataName).resolve(baseUri), true).getContents().get(0), baseUri);
 	}
 
 	protected void startScxml() {

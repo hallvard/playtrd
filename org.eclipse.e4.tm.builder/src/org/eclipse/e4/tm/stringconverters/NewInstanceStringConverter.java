@@ -37,7 +37,7 @@ public class NewInstanceStringConverter extends AbstractStringConverter {
 			}
 		}
 		if (cons == null) {
-			Constructor<T>[] conses = klass.getConstructors();
+			Constructor<T>[] conses = (Constructor<T>[]) klass.getConstructors();
 			for (int i = 0; i < conses.length; i++) {
 				if (conses[i].getParameterTypes().length == 1) {
 					cons = conses[i];

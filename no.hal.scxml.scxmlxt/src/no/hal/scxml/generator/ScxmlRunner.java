@@ -18,16 +18,20 @@ import org.apache.commons.scxml.io.SCXMLSerializer;
 import org.apache.commons.scxml.model.ModelException;
 import org.apache.commons.scxml.model.SCXML;
 import org.apache.commons.scxml.model.TransitionTarget;
-import org.eclipse.e4.emf.ecore.javascript.JavascriptSupport;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupport;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupportFactory;
 
 public class ScxmlRunner {
 
 	private ScriptEventManager scriptEventManager;
-
-	public ScxmlRunner() {
+	private ResourceSet resourceSet;
+	
+	public ScxmlRunner(ResourceSet resourceSet) {
+		this.resourceSet = resourceSet;
 	}
 
 	private ScxmlxtGenerator scxmlxtGenerator;
@@ -62,7 +66,8 @@ public class ScxmlRunner {
 	}
 
 	private JavascriptSupport javascriptSupport;
-
+	
+	
 	public void setJavascriptSupport(JavascriptSupport javascriptSupport) {
 		this.javascriptSupport = javascriptSupport;
 	}
@@ -72,9 +77,9 @@ public class ScxmlRunner {
 	public void start() {
 		try {
 			if (javascriptSupport == null) {
-				javascriptSupport = new JavascriptSupport();
+				javascriptSupport = JavascriptSupportFactory.getInstance().createJavascriptSupport();
 			}
-			Evaluator evaluator = new EmfJavascriptEvaluator(javascriptSupport, null);
+			Evaluator evaluator = new EmfJavascriptEvaluator(resourceSet, javascriptSupport);
 			executor = new ScxmlEventQueueExecutor(evaluator, new SimpleErrorReporter()) {
 				@Override
 				public synchronized void triggerEvents(TriggerEvent[] events) throws ModelException {
@@ -83,7 +88,7 @@ public class ScxmlRunner {
 					try {
 						super.triggerEvents(events);
 					} finally {
-						Iterator states = getCurrentStatus().getStates().iterator();
+						Iterator<?> states = getCurrentStatus().getStates().iterator();
 						while (states.hasNext()) {
 							org.apache.commons.scxml.model.State state = (org.apache.commons.scxml.model.State)states.next();
 							Object scxmlxtObject = scxmlGenerator.getScxmlxtObject(state);

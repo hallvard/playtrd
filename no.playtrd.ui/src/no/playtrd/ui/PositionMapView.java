@@ -9,7 +9,6 @@ import no.playtrd.v10.playtrd.Positioned;
 import no.playtrd.v10.playtrd.Service;
 import no.playtrd.v10.playtrd.impl.PlaytrdFactoryImpl;
 
-import org.eclipse.e4.emf.javascript.ui.AbstractSelectionView;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EAttribute;
@@ -17,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.js4emf.ui.AbstractSelectionView;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
 import org.jscience.geography.coordinates.LatLong;
@@ -31,7 +31,7 @@ public class PositionMapView extends AbstractSelectionView {
 		return o instanceof EObject;
 	}
 	private EObject getSelectedEObject() {
-		return (EObject)this.selection;
+		return (EObject) getSelection();
 	}
 
 	public final static String playtrdSourceUri = "http://playtrd.no/v10/playtrd.ecore";

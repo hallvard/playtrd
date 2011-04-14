@@ -12,14 +12,6 @@ package org.eclipse.e4.tm.ui.javascript;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.e4.emf.command.javascript.ApplyAsCommand;
-import org.eclipse.e4.emf.ecore.javascript.DisplayAsyncSupport;
-import org.eclipse.e4.emf.ecore.javascript.JavascriptNotificationSupport;
-import org.eclipse.e4.emf.ecore.javascript.JavascriptSupport;
-import org.eclipse.e4.emf.ecore.javascript.functions.AbstractFunction;
-import org.eclipse.e4.emf.ecore.javascript.functions.AdaptTo;
-import org.eclipse.e4.emf.ecore.javascript.functions.ApplyAsync;
-import org.eclipse.e4.emf.ecore.javascript.functions.BindingApply;
 import org.eclipse.e4.tm.builder.IBuilder;
 import org.eclipse.e4.tm.swt.widgets.WidgetsPackage;
 import org.eclipse.e4.tm.ui.editor.IPostProcessor;
@@ -29,6 +21,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupport;
+import org.eclipse.emf.js4emf.ecore.JavascriptSupportFactory;
+import org.eclipse.emf.js4emf.ecore.internal.functions.AbstractFunction;
+import org.eclipse.emf.js4emf.ecore.internal.functions.ApplyAsync;
+import org.eclipse.emf.js4emf.ecore.internal.functions.BindingApply;
+import org.eclipse.emf.js4emf.swt.DisplayAsyncSupport;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IFileEditorInput;
 import org.mozilla.javascript.Context;
@@ -45,7 +43,7 @@ public class JavascriptPostProcessor implements IPostProcessor {
 
 	private JavascriptSupport getJavascriptSupport(IAdaptable adaptable) {
 		if (javascriptSupport == null) {
-			javascriptSupport = new JavascriptSupport();
+			javascriptSupport = JavascriptSupportFactory.getInstance().createJavascriptSupport();
 
 			IProject project = ((IFileEditorInput)adaptable.getAdapter(IFileEditorInput.class)).getFile().getProject();
 			JavaProjectClassLoader classLoader = new JavaProjectClassLoader(project, javascriptSupport.getClass().getClassLoader());
@@ -66,12 +64,11 @@ public class JavascriptPostProcessor implements IPostProcessor {
 				}
 			}
 			
-			javascriptSupport.setVariable(null, "adaptTo", new AdaptTo());
-			javascriptSupport.setVariable(null, "applyAsCommand", new ApplyAsCommand(editingDomain));
+			javascriptSupport.getJsScope(null).setVariable("applyAsCommand", new ApplyAsCommand(editingDomain));
 			DisplayAsyncSupport asyncSupport = new DisplayAsyncSupport(composite.getDisplay());
-			javascriptSupport.setVariable(null, "applyAsync", new ApplyAsync(asyncSupport));
-			javascriptSupport.setVariable(null, "bindingApply", new BindingApply(asyncSupport));
-			javascriptSupport.setVariable(null, "supportNotifications", new AbstractFunction() {
+			javascriptSupport.getJsScope(null).setVariable("applyAsync", new ApplyAsync(asyncSupport));
+			javascriptSupport.getJsScope(null).setVariable("bindingApply", new BindingApply(asyncSupport));
+			javascriptSupport.getJsScope(null).setVariable("supportNotifications", new AbstractFunction() {
 				public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] args) {
 					Notifier notifier = typeCheckArgument(args, 0, Notifier.class);
 					javascriptSupport.supportNotifications(notifier);

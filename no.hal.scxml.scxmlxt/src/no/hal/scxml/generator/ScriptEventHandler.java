@@ -6,11 +6,11 @@ import org.apache.commons.scxml.SCInstance;
 import org.apache.commons.scxml.SCXMLExecutor;
 import org.apache.commons.scxml.SCXMLExpressionException;
 import org.apache.commons.scxml.model.TransitionTarget;
-import org.eclipse.e4.emf.ecore.javascript.EmfContext;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.edit.provider.IDisposable;
+import org.eclipse.emf.js4emf.ecore.internal.EmfContext;
 
 public class ScriptEventHandler extends AdapterImpl {
 

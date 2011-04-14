@@ -84,7 +84,7 @@ public class JavascriptEvaluator implements Evaluator {
 		Object result = null;
 		org.mozilla.javascript.Context context = enterContext();
 		try {
-			Scriptable evaluationScope = getEvaluationScope((JavascriptContext)ctx);
+			Scriptable evaluationScope = getEvaluationScope((JavascriptContext) ctx);
 			result = context.evaluateString(evaluationScope, expr, "SCXMLExcpression", -1, null);
 		} catch (Exception e) {
 			throw scxmlEvalException(expr, e);

@@ -77,9 +77,9 @@ public class RuntimeEditorApplication extends EcoreEditor {
 		});
 	}
 	
-	private Game game;
+	private Game<?> game;
 	
-	public Game getGame() {
+	public Game<?> getGame() {
 		if (game == null && getEditingDomain() != null) {
 			game = AbstractRuntime.getEObject(editingDomain.getResourceSet(), Game.class, Status.OK);
 		}
@@ -102,7 +102,7 @@ public class RuntimeEditorApplication extends EcoreEditor {
 		return modelContext;
 	}
 
-	public Object getAdapter(Class key) {
+	public Object getAdapter(@SuppressWarnings("rawtypes") Class key) {
 		if (key.equals(EditingDomain.class)) {
 			return getEditingDomain();
 		} else if (key.equals(URIConverter.class)) {

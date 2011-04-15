@@ -27,8 +27,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Scripted" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scriptSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/e4/emf/ecore/javascript/scriptSourceFeature">
-        <details key="js" value="eval, listen"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/Javascript/sourceFeature">
+        <details key="Javascript" value="eval, listen"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/e4/swt.ecore">
         <details key="access" value="binder"/>

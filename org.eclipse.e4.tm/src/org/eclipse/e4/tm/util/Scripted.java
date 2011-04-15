@@ -36,7 +36,7 @@ public interface Scripted extends EObject {
 	 * @return the value of the '<em>Script Source</em>' attribute.
 	 * @see #setScriptSource(String)
 	 * @see org.eclipse.e4.tm.util.UtilPackage#getScripted_ScriptSource()
-	 * @model annotation="http://www.eclipse.org/e4/emf/ecore/javascript/scriptSourceFeature js='eval, listen'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/Javascript/sourceFeature Javascript='eval, listen'"
 	 *        annotation="http://www.eclipse.org/e4/swt.ecore access='binder'"
 	 * @generated
 	 */

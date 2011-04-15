@@ -35,7 +35,7 @@ public class UtilFactoryImpl extends EFactoryImpl implements UtilFactory {
 	 */
 	public static UtilFactory init() {
 		try {
-			UtilFactory theUtilFactory = (UtilFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/e4/tm/util.ecore"); 
+			UtilFactory theUtilFactory = (UtilFactory)EPackage.Registry.INSTANCE.getEFactory("platform:/plugin/org.eclipse.e4.tm/model/tm/util.ecore"); 
 			if (theUtilFactory != null) {
 				return theUtilFactory;
 			}

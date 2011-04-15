@@ -42,7 +42,7 @@ public interface UtilPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/e4/tm/util.ecore";
+	String eNS_URI = "platform:/plugin/org.eclipse.e4.tm/model/tm/util.ecore";
 
 	/**
 	 * The package namespace name.

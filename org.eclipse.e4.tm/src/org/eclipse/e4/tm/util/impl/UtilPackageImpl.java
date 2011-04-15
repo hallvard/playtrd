@@ -151,22 +151,11 @@ public class UtilPackageImpl extends EPackageImpl implements UtilPackage {
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		WidgetsPackageImpl theWidgetsPackage = (WidgetsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(WidgetsPackage.eNS_URI) instanceof WidgetsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(WidgetsPackage.eNS_URI) : WidgetsPackage.eINSTANCE);
-		StylesPackageImpl theStylesPackage = (StylesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StylesPackage.eNS_URI) instanceof StylesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StylesPackage.eNS_URI) : StylesPackage.eINSTANCE);
-		LayoutsPackageImpl theLayoutsPackage = (LayoutsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LayoutsPackage.eNS_URI) instanceof LayoutsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LayoutsPackage.eNS_URI) : LayoutsPackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theUtilPackage.createPackageContents();
-		theWidgetsPackage.createPackageContents();
-		theStylesPackage.createPackageContents();
-		theLayoutsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theUtilPackage.initializePackageContents();
-		theWidgetsPackage.initializePackageContents();
-		theStylesPackage.initializePackageContents();
-		theLayoutsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theUtilPackage.freeze();
@@ -479,8 +468,8 @@ public class UtilPackageImpl extends EPackageImpl implements UtilPackage {
 		// Create annotations
 		// http://www.eclipse.org/e4/tm/util.ecore
 		createUtilAnnotations();
-		// http://www.eclipse.org/e4/emf/ecore/javascript/scriptSourceFeature
-		createScriptSourceFeatureAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/Javascript/sourceFeature
+		createSourceFeatureAnnotations();
 		// http://www.eclipse.org/e4/swt.ecore
 		createSwtAnnotations();
 	}
@@ -502,18 +491,18 @@ public class UtilPackageImpl extends EPackageImpl implements UtilPackage {
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/e4/emf/ecore/javascript/scriptSourceFeature</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/Javascript/sourceFeature</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createScriptSourceFeatureAnnotations() {
-		String source = "http://www.eclipse.org/e4/emf/ecore/javascript/scriptSourceFeature";			
+	protected void createSourceFeatureAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/Javascript/sourceFeature";			
 		addAnnotation
 		  (getScripted_ScriptSource(), 
 		   source, 
 		   new String[] {
-			 "js", "eval, listen"
+			 "Javascript", "eval, listen"
 		   });			
 	}
 
